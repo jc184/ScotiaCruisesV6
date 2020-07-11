@@ -1,0 +1,55 @@
+﻿@model ScotiaCruisesV6.Models.DB.Bookings
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Bookings</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoAdults)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoAdults)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoChildren)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoChildren)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NoInfants)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NoInfants)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SailingDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SailingDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Customer)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Customer.EmailAddress)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Route)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Route.RouteName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.BookingId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
